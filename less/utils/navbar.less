@@ -1,0 +1,37 @@
+@navbar-swag-hover-color: #fff;
+
+.navbar {
+	// Add z-index
+	// due to bootstrap adding z-index
+	// on navbar overrides
+	z-index: @zindex-navbar;
+}
+
+.navbar-swag {
+	border: 0;
+	background-color: #fff;
+}
+
+.navbar-swag .nav > li > a {
+	color: @color-dt;
+}
+
+.navbar-swag .nav > li > a:hover,
+.navbar-swag .nav > li > a:focus,
+.navbar-swag .nav > li.active > a {
+	color: #fff;
+	background-color: @color-trademark;
+}
+
+.navbar-swag .nav > li.active > a:hover,
+.navbar-swag .nav > li.active > a:focus {
+	background-color: @color-trademark-dk;
+}
+
+// Adds transition to all hovers and focus
+.navbar-swag .nav > li > a:hover,
+.navbar-swag .nav > li > a:focus,
+.navbar-swag .nav > li > a.active:hover,
+.navbar-swag .nav > li > a.active:focus {
+	transition: background 0.15s;
+}
