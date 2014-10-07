@@ -1,7 +1,10 @@
-@font-family-ruda: "Ruda", @font-family-sans-serif;
-@font-family-montserrat: "Montserrat", @font-family-sans-serif;
+// Uses custom font,
+// then adds a fallback to bootstrap defaults
+@font-family-ruda: "Ruda", "Helvetica Neue", Helvetica, Arial, sans-serif;
+@font-family-montserrat: "Montserrat", @font-family-ruda;
 
-@headings-font-family: @font-family-ruda;
+@font-family-sans-serif: @font-family-ruda;
+@headings-font-family: @font-family-montserrat;
 @headings-font-weight: 400;
 
-@border-radius: 3px;
+@border-radius-base: 2px;

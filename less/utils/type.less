@@ -1,13 +1,36 @@
-h1, h2, h3, h4, h5, h6,
-.h1, .h2, .h3, .h4, .h5, .h6,
+// Override bootstrap's default
+@font-size-base: 12px;
+
+// Generally assign font family montserrat
+// to a componenet / utility
 .navbar,
-.content-title  {
+.content-title,
+h1, h2, h3, h4, h5, h6,
+.h1, .h2, .h3, .h4, .h5, .h6 {
 	font-family: @font-family-montserrat;
 	font-weight: bold;
 	text-transform: uppercase;
 }
 
-
-footer {
+// Assign elements and classes
+// with the "ruda" typeface
+p,
+footer,
+.footer,
+.btn-outline {
 	font-family: @font-family-ruda;
 }
+
+// Place holders
+.form-control::-moz-placeholder { font-family: @font-family-ruda; }
+.form-control::-webkit-input-placeholder { font-family: @font-family-ruda; }
+
+// Long shadows
+// .u-long-shadow(@color, @i: 1) when (@i =< 38) {
+// 	@darkened-color: darken(@color, 8%);
+// 	@shadow-color: lighten(@darkened-color, percentage(0.0001 * @i));
+// 	@shadow-pos: @i * 1px;
+
+// 	text-shadow: @shadow-color @shadow-pos @shadow-pos;
+// 	.u-long-shadow(@shadow-color, @i + 1);
+// }

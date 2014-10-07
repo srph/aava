@@ -1,3 +1,30 @@
-.button-color(@color, @color-lt, @color-dt) {
+.btn-outline-mixin(@color) {
+	border-color: @color;	
 
+	&:hover,
+	&:focus {
+		border-color: transparent;
+		background-color: @color;
+	}
 }
+
+.btn-outline {
+	padding-left: 15px !important;
+	padding-right: 15px !important;
+	height: 40px !important;
+	font-size: @font-size-base;
+	background: transparent;
+	border: 1px solid @color-default;
+	border-radius: @border-radius-base;
+}
+
+.btn-outline:hover {
+	color: #fff;
+	background: @color-default;
+	transition: background 0.15s;
+}
+
+.btn-outline.btn-outline-danger  { .btn-outline-mixin(@color-danger); }
+.btn-outline.btn-outline-success { .btn-outline-mixin(@color-success); }
+.btn-outline.btn-outline-warning { .btn-outline-mixin(@color-warning); }
+.btn-outline.btn-outline-primary { .btn-outline-mixin(@color-primary); }
